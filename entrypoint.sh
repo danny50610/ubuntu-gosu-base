@@ -10,7 +10,6 @@ echo "Starting with UID : $USER_ID"
 useradd --shell /bin/bash -u $USER_ID -o -c "" -m user
 export HOME=/home/user
 
-cp -r /root/.gradle /home/user
-chown -R user:user /home/user/.gradle
+chown -R user:user /home/user
 
 exec /usr/local/bin/gosu user "$@"
